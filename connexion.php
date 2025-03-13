@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             if (password_verify($password, $user['password'])){
                 $_SESSION['username'] = $user['username'];
                 echo "<p style='color: green;'>Connexion réussie !</p>";
-                header("Location: accueil.php");
+                header("Location: index.php");
                 exit();
             } else{
                 echo "<p style 'color: red;'>Mot de passe incorrect.</p>";

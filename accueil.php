@@ -34,7 +34,7 @@ if (isset($_POST['logout'])) {
     </div>
   </header>
   <main>
-    <p>Ceci est la page d'accueil de votre application.</p>
+    <p>Ceci est la page d'accueil/deconnexion de votre application.</p>
   </main>
 </body>
 </html>

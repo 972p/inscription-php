@@ -48,7 +48,7 @@ if (session_status()=== PHP_SESSION_NONE){
 
     <div class="navbar">
         <div class ="navbar-left">
-            <a href='accueil.php'><img src="images/logo fr.png" alt="logo" class="navbar-logo"> </a>
+            <a href='index.php'><img src="images/logo fr.png" alt="logo" class="navbar-logo"> </a>
         </div>  
 
 
@@ -62,16 +62,16 @@ if (session_status()=== PHP_SESSION_NONE){
     </div>
 
     <div class="navbar-right">
-        <?php if(!isset($_SESSION['loggeed in'])):?>
-            <a href='cart.php'><img src="images/traits.png" alt="panier" width = 30px height = 30px></a>
+        <?php if(!isset($_SESSION['username'])):?>
+        <a href='cart.php'><img src="images/traits.png" alt="panier" width = 30px height = 30px></a>
             <a href='compte.php'><img src="images/utilisateur.png" alt="profil" width = 30px height = 30px></a>
             <a href='connexion.php'><img src="images/login.png" alt="login" width = 30px height = 30px></a>
             <a href='inscription.php'><img src="images/inscription.png" alt="inscription" width = 30px height = 30px></a>
-            <?php else: ?>
-                <a href='accueil.php'>Accueil</a>
-                <a href='index.php'>Cours de beatmaking</a>
-                <a href='compte.php'>Compte</a>
-                <a href='logout.php'>Deconnexion</a>
+            <a href="accueil.php"><img src="images/deconnexion-de-lutilisateur.png" alt="deconnexion" width = 30px height = 30px></a>
+        <?php else: ?>
+            <a href='cart.php'><img src="images/traits.png" alt="panier" width = 30px height = 30px></a>
+            <a href='compte.php'><img src="images/utilisateur.png" alt="profil" width = 30px height = 30px></a>
+            <a href="accueil.php"><img src="images/deconnexion-de-lutilisateur.png" alt="deconnexion" width = 30px height = 30px></a>
             <?php endif; ?>
         </div>         
     </div>

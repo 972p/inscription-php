@@ -19,7 +19,7 @@ try {
         $table = $_GET['table'];
         $id = $_GET['id'];
 
-        $stmt = $conn->prepare("DELETE FROM $table WHERE id = :id");
+        $stmt = $conn->prepare("DELETE FROM $table WHERE name = :name");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 

@@ -54,7 +54,7 @@ if (isset($_POST['remove_item'])) {
             setcookie('cart', serialize($_SESSION['cart']), time() + (86400 * 30), '/');  // Cookie expire dans 30 jours
         }
     }
-    header("Location: checkout.php");
+    header("Location: cart.php");
     exit();
 }
 

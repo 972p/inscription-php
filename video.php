@@ -79,6 +79,50 @@ try {
         .back-link:hover{
             text-decoration: underline;
         }
+
+        .video-details{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .details-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 15px;
+        }
+
+        .details-left{
+            flex:1;
+            text-align: left;
+        }
+
+        .details-right{
+            flex:0 0 200px;
+            text-align: right;
+        }
+
+        button[name="add_to_cart.php"]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        butttom[name="add_to_cart.php"]:hover{
+            background-color: #45a049;
+        }
+
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
@@ -94,9 +138,21 @@ try {
             Votre navigateur ne supporte pas les vidéos.
         </video>
         <p>
-            <strong>Description :</strong> <?= htmlspecialchars($video['upload_date']); ?> <br>
-            <strong>Durée :</strong> <?= htmlspecialchars($video['duration']); ?>
+            <strong>Description :</strong> <?= htmlspecialchars($video['description']); ?> </p>
+            <div class="details-container">
+                <div class="details-left">
+                    <p>
+                        <strong>Durée :</strong> <?= htmlspecialchars($video['duration']); ?> <br>
+                        <strong>Date de mise en ligne :</strong> <?= htmlspecialchars($video['upload_date']); ?> <br>
+                    </p>
+                </div>
+            </div>
         </p>
+        </div>
+        <div class="details-right">
+            <form action="post" action="add_to_cart.php">
+                <input type="hidden" name="product_id" value="<?= htmlspecialchars($video['id']); ?>">
+            </form>
         </div>
 </div>
 </body>
