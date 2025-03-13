@@ -141,3 +141,13 @@ input[type="submit"]{
 .register-link2:hover{
     text-decoration: underline;
 }
+
+
+.produt-item h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-item h2 a:hover{
+    color: red;
+}

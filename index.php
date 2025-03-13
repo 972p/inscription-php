@@ -49,7 +49,16 @@ if (isset($_POST['add_to_cart'])){
                 <source src="<?php echo htmlspecialchars($product['video']); ?>" type="video/mp4">
                 Votre navigateur ne supporte pas les vidéos.
             </video>
-            <h2><?php echo htmlspecialchars($product['name']); ?></h2>
+
+
+
+            <h2>
+                <a href="video.php?id=<?php echo htmlspecialchars($product['id']); ?>">
+                    <?php echo htmlspecialchars($product['name']);?>
+                </a>
+            </h2>
+
+
             <p>Prix: €<?php echo htmlspecialchars($product['price']); ?></p>
             <form method="post">
                 <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">

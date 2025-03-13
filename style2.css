@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    text-decoration: none;
 }
 
 body {
@@ -179,7 +180,7 @@ input[type="submit"] {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 500px;
     background-color: #fff;
     padding: 15px;
     text-align: center;
@@ -192,7 +193,7 @@ input[type="submit"] {
 
 /* Image du produit */
 .product-item img {
-    width: 40%;
+    width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
